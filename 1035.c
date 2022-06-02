@@ -1,16 +1,14 @@
+
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int a,b,c,d,csd,asb;
-    scanf("%d%d%d%d",&a,&b,&c,&d);
-    csd=c+d;
-    asb=a+b;
-    if(b>c && d>a && csd>asb && c>0 && d>0 && a%2==0){
-        printf("Valores aceitos\n");
-    }
-    else{
-        printf("Valores nao aceitos\n");
-      }
-
+    float a,b,c,pos,neg,agv;
+    scanf("%f%f%f",&a,&b,&c);
+    agv=((b*b-4*a*c));
+    printf("%f",agv);
+    pos=(-a+agv)/2*a;
+    neg=(-a-agv)/2*a;
+    printf("R1 = %f\nR2 = %f\n",pos,neg);
     return 0;
 }
